@@ -513,6 +513,52 @@ header .content a:hover{
    font-weight: 200;
    transition: 1s;
 }
+
+
+
+
+.club .mobimgsection{
+   position: relative;
+}
+.club .mobimgsection img{
+   height: 405px;
+   min-width: 768px;
+   object-fit: cover;
+}
+.club .mobimgsection .details{
+   position: absolute;
+   top: 44%;
+   padding: 20px 20px 35px 20px;
+   background: rgba(0,0,0,0.60);
+   color: #ffffff;
+}
+.club .mobimgsection .details h3{
+   padding-bottom: 20px;
+   font-weight: 300;
+   font-size: 24px;
+}
+.club .mobimgsection .details p{
+   padding-bottom: 40px;
+   line-height: 20px;
+}
+.club .mobimgsection .details .join{
+   padding: 15px 30px;
+   border-radius: 24px;
+   border: 1px solid #ffffff;
+   color: #ffffff;
+}
+.club .mobimgsection .details a:hover{
+   background-color: #ffffff;
+   color: #5C0931;
+   font-weight: 200;
+   transition: 1s;
+}
+
+
+
+
+
+
 /* ============================================= */
 .letsgo {
    background-color: #F2F3FA;
@@ -765,4 +811,124 @@ header .content a:hover{
 }
 .footer .container .copyright .content a:hover{
    text-decoration: underline;
+}
+
+
+
+
+
+/* TABLETS */
+@media (max-width:990px){
+   header{
+      width: 100%;
+      height: 350px;
+      background-image: url('Images/m-moon-heart.jpg');
+      background-position: center;
+      background-size: cover;
+   }
+   header nav{
+      display: none;
+   }
+   header .content{
+      margin: 0;
+      padding: 50px;
+   }
+   .booking .booking-container .navbar .hide{
+      display: none;
+   }
+   .booking .booking-container .navbar a{
+      margin-left: 50px;
+   }
+   .booking .input-container .input-grid{
+      flex-direction: column;
+   }
+   .booking .btn-container a{
+      left: 20px;
+   }
+   .next-trip{
+      padding: 0 20px;
+   }
+   .next-trip .items{
+      flex-direction: column;
+   }
+   .fares .container{
+      grid-template-columns: 1fr;
+   }
+   .fares .container .left img{
+      width: 100%;
+   }
+   .fares .right img{
+      width: 100%;
+   }
+   .fares .container .right{
+      grid-template-columns: 1fr;
+   }
+   .fares .bottom{
+      display: none;
+   }
+   .club .imgsection picture source{
+      width: 768px;
+   }
+   .subscribe .container img{
+      width: 100%;
+   }
+   .subscribe .details .check{
+      display: none;
+   }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILES */
+@media (max-width:556px){
+   header .content{
+      padding: 10px 20px 20px 20px;
+   }
+   .booking .booking-container{
+      position:relative;
+      top: -57px;
+      margin: 0 20px;
+   }
+   .booking .booking-container .navbar a{
+      margin-left: 20px;
+      font-size: 16px;
+   }
+   .booking .btn-container a{
+      font-size: 12px;
+   }
+   .next-trip .items .col h4{
+      bottom: 20%;
+   }
+   .fares{
+      padding: 0 20px;
+   }
+   .fares .container .left{
+      display: none;
+   }
 }

@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <button id="myBtn" onclick="topFunction()"><i class="uil uil-angle-up"></i></button>
+   <!-- <button id="myBtn" onclick="topFunction()"><i class="uil uil-angle-up"></i></button> -->
    <header>
       <nav>
          <div class="logo">
@@ -42,7 +42,7 @@
          <a href="#"><i class="uil uil-plane-departure"></i> Book</a>
          <a href="#"><i class="uil uil-calendar-alt"></i> My Trips</a>
          <a href="#"><i class="uil uil-check-circle"></i> Check-in</a>
-         <a href="#"><i class="uil uil-location-point"></i> Flight Status</a>
+         <a href="#" class="hide"><i class="uil uil-location-point"></i> Flight Status</a>
       </div>
       <div class="inner-navbar">
          <a href="#">Flights</a>
@@ -227,7 +227,10 @@
          <a href="#">Virgin Australia partnership</a>
       </div>
       <div class="imgsection">
-         <img src="Images/h1-ffp-cards-qsuite-crew.jpg">
+         <picture>
+            <source media="(max-width:556px)" srcset="/Images/s-ffp-cards-qsuite-crew.jpg">
+            <img src="Images/h1-ffp-cards-qsuite-crew.jpg">
+         </picture>
          <div class="details">
             <h3>Join Privilege Club</h3>
             <p>Earn Avios and use them towards Shopping at Qatar Duty Free,flights,upgrades,extra baggage and more Exclusive benifits</p>
@@ -238,7 +241,7 @@
 
 
 
-   <section class="letsgo">
+   <section class="letsgo" style="display: none;">
       <div class="heading">
          <h1>Let's go places together</h1>
          <p>Discover the latest offers and news and start planning your next trip with us.</p>
@@ -314,7 +317,10 @@
 
    <section class="subscribe">
       <div class="container">
-         <img src="Images/NL_Background_Desktop.png">
+         <picture>
+            <source media="(max-width:768px)" srcset="/Images/NL_Background_Mobile.png" style="width: 768px;">
+            <img src="Images/NL_Background_Desktop.png"> 
+         </picture>
          <div class="details">
             <h3>Never miss an offer</h3>
             <p>Subscribe and be the first to receive our exclusive offers.</p>
@@ -341,7 +347,7 @@
       </div>
    </section>
 
-   <footer class="footer">
+   <footer class="footer" style="display: none;">
       <div class="container">
          <div class="row-1">
             <div class="footer-col">
