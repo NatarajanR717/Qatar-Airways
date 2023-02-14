@@ -875,6 +875,33 @@ header .content a:hover{
    .subscribe .details .check{
       display: none;
    }
+   .footer .container .row-1{
+      grid-template-columns: 1fr;
+      padding-bottom: 50px;
+   }
+   .footer .container .row-1 .footer-col ul li{
+      display: none;
+   }
+   .footer .container .copyright .content{
+      display: none;
+   }
+   footer .container .row-2{
+      flex-direction: column;
+      gap: 10px;
+   }
+   .footer .container .row-2 .col .logo img{
+      width: 10%;
+   }
+   footer .container .row-2 .col .detail{
+      position: absolute;
+      top: 10%;
+      left: 100px;
+      width: 400px;
+   }
+   footer .container .row-2 .col .detail p{
+      width: 400px;
+      font-size: 14px;
+   }
    }
 
 
