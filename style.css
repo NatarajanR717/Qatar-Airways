@@ -781,7 +781,10 @@ header .content a:hover{
       background-position: center;
       background-size: cover;
    }
-   header nav{
+   header nav .logo{
+      display: none;
+   }
+   header nav .navbar{
       display: none;
    }
    header .content{
@@ -805,6 +808,9 @@ header .content a:hover{
    }
    .next-trip .items{
       flex-direction: column;
+   }
+   .next-trip .items .col-2{
+      flex-direction: row;
    }
    .fares .container{
       grid-template-columns: 1fr;
@@ -910,6 +916,9 @@ header .content a:hover{
    }
    .booking .btn-container a{
       font-size: 12px;
+   }
+   .next-trip .items .col-2{
+      flex-direction: column;
    }
    .next-trip .items .col h4{
       bottom: 20%;
