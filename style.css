@@ -126,14 +126,26 @@ header .content a:hover{
    color: var(--violet);
 }
 .booking .input-container{
+   position: relative;
    display: flex;
    background-color: #ffffff;
    margin: 0 20px;
    border-radius: 5px;
-   border: 1px solid #555555;
 }
 .booking .input-container .input-grid{
    display:flex;
+}
+.booking .input-container .input-grid .swap{
+   position: absolute;
+   left: 230px;
+   top: 10px;
+   padding: 2px;
+   border: 1px solid #555555;
+   font-size: 20px;
+   border-radius: 50%;
+}
+.booking .input-container .input-grid .box{
+   border: 1px solid #555555;
 }
 .booking .input-container .input-grid .box input{
    padding: 10px 20px 10px 10px;
@@ -158,7 +170,7 @@ header .content a:hover{
 }
 .booking .btn-container a{
    position: relative;
-   left: 71.5%;
+   left: 66.5%;
    color: #5C0931;
    text-align:right;
 }
@@ -292,6 +304,57 @@ header .content a:hover{
    grid-template-columns: 1fr 1fr;
    gap: 20px;
 }
+.fares .container .right .row-1{
+   position: relative;
+}
+.fares .container .right .intro{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #5C0931;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  transition: .5s ease;
+}
+.fares .container .right .row-1 img{
+   background-color: #5C0931;
+}
+.fares .container .right .intro .btn-container{
+   margin-top: 30px;
+}
+.fares .container .right .intro .btn-container .book{
+   padding: 15px 30px;
+   background-color: #FFA903;
+   color: #5C0931;
+   border-radius: 30px;
+   text-align: center;
+}
+.fares .container .right .intro .btn-container .discover{
+   margin-top: 20px;
+   padding: 15px 30px;
+   text-align: center;
+   border: 1px solid #ffffff;
+   border-radius: 30px;
+}
+.fares .container .right .row-1:hover .intro{
+   background-color: #5C0931;
+   height: 100%;
+   border-radius: 24px 24px 20px 20px;
+}
+.fares .container .right .row-1:hover .intro h3{
+   color: #ffffff;
+}
+.fares .container .right .row-1:hover .intro p{
+   color: #ffffff;
+}
+.fares .container .right .row-1:hover .intro .cardclasstype{
+   color: #ffffff;
+}
+.fares .container .right .row-1:hover .intro .cardcost{
+   color: #ffffff;
+}
 .fares .container .left img{
    min-width:570px;
    object-fit: cover;
@@ -328,7 +391,31 @@ header .content a:hover{
 .fares .container .left .btn-container{
    position: relative;
    top: 20%;
+   left: 50%;
+   max-width: 250px;
 }
+.fares .container .left:hover .intro{
+   background-color: #5C0931;
+   transition: .5s;
+}
+.fares .container .left:hover .intro h3{
+   color: #ffffff;
+}
+.fares .container .left:hover .intro p{
+   color: #ffffff;
+}
+.fares .container .left:hover .intro .cardclasstype{
+   color: #ffffff;
+}
+.fares .container .left:hover .intro .cardcost{
+   color: #ffffff;
+}
+.fares .container .left:hover .intro .disc{
+   color: #ffffff;
+   border: 1px solid #ffffff;
+   border-radius: 30px;
+}
+
 .fares .container .left .btn-container a{
    padding: 10px 20px;
    background-color: #FFA903;
@@ -698,11 +785,9 @@ header .content a:hover{
    color: #ffffff;
 }
 /* ========================================== */
-.footer{
-   background-color: #5C0931;
-}
 .footer .container{
-   margin: 0 50px;
+   padding: 0 50px;
+   background-color: #5C0931;
 }
 .footer .container .row-1{
    display: grid;
@@ -797,6 +882,11 @@ header .content a:hover{
    .booking .booking-container .navbar a{
       margin-left: 50px;
    }
+   .booking .input-container .input-grid .swap{
+      left: 200px;
+      top: 30px;
+      transform: rotate(90deg);
+   }
    .booking .input-container .input-grid{
       flex-direction: column;
    }
@@ -821,8 +911,8 @@ header .content a:hover{
    .fares .right img{
       width: 100%;
    }
-   .fares .container .right{
-      grid-template-columns: 1fr;
+   .fares .container .right .row-1 .intro{
+      display:none;
    }
    .fares .bottom{
       display: none;
@@ -925,6 +1015,9 @@ header .content a:hover{
    }
    .fares{
       padding: 0 20px;
+   }
+   .fares .container .right{
+      grid-template-columns: 1fr;
    }
    .fares .container .left{
       display: none;
