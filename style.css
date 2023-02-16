@@ -206,12 +206,12 @@ header .content a:hover{
 .next-trip .items img{
    max-width: 100%;
    height: 100%;
-   border-radius: 20px 20px 24px 24px;
+   border-radius: 20px 20px 0 0;
    object-fit: cover;
 }
 .next-trip .items .col h4{
    position: absolute;
-   bottom: 10%;
+   bottom: 5%;
    font-size: 20px;
    font-weight: 300;
    color: #ffffff;
@@ -219,32 +219,34 @@ header .content a:hover{
 }
 .next-trip .items .col .imgheading{
    background-color: #ffffff;
+   border-radius: 0 0 24px 24px;
 }
-.next-trip .items .col a{
-   position: absolute;
-   bottom: 10px;
-   left: 20px;
+.next-trip .items .col .link{
+   padding: 15px 20px;
+   font-size: 20px;
+   border-radius: 20px;
 }
 .next-trip .items .col-2 {
    display: flex;
    flex-direction: column;
-   gap: 20px;
+   gap: 80px;
 }
 .next-trip .items .col-2 .row{
    position: relative;
 }
 .next-trip .items .col-2 .row h4{
    position: absolute;
-   bottom: 35px;
+   bottom: 5%;
    left: 20px;
    font-size: 20px;
    color: #ffffff;
    font-weight: 300;
 }
-.next-trip .items .col-2 .row a{
-   position: absolute;
-   bottom: 10px;
-   left: 20px;
+.next-trip .items .col-2 .row .link{
+   background-color: #ffffff;
+   padding: 15px 20px;
+   font-size: 20px;
+   border-radius: 0 0 24px 24px;
 }
 .next-trip .items .col-3{
    display: grid;
@@ -265,7 +267,7 @@ header .content a:hover{
 
 /* ===================================================================================================== */
 .fares{
-   padding:0 50px 50px 50px;
+   padding:50px;
    background-color:#F2F3FA;
 }
 .fares .content h1{
@@ -284,11 +286,8 @@ header .content a:hover{
    outline: none;
    border: none;
    width: 200px;
+   background-color: #F2F3FA;
    border-bottom: 2px solid #5C0931;
-}
-.fares .content .from-label input:focus{
-   border: 2px solid blue;
-   padding-right: 20px;
 }
 .fares .content .from-label i{
    color: #5C0931;
@@ -306,6 +305,9 @@ header .content a:hover{
 }
 .fares .container .right .row-1{
    position: relative;
+}
+.fares .container .right .mobhead{
+   display: none;
 }
 .fares .container .right .intro{
   position: absolute;
@@ -360,6 +362,18 @@ header .content a:hover{
    object-fit: cover;
    border-radius: 20px 20px 0 0;
 }
+.fares .container .left{
+   position: relative;
+}
+.fares .container .left .flylabel{
+   position: absolute;
+   z-index: 1;
+   top: 15px;
+   padding: 6px 15px;
+   background-color: #FFA903;
+   color: #000;
+   border-radius: 0 6px 6px 0;
+}
 .fares .container .left:hover{
    box-shadow: 0 6px 22px -5px rgb(0 0 0 / 10%), 0 0 6px -1px rgb(0 0 0 / 10%);
    border-radius: 20px 20px 24px 24px;
@@ -396,7 +410,7 @@ header .content a:hover{
 }
 .fares .container .left:hover .intro{
    background-color: #5C0931;
-   transition: .5s;
+   transition: 1s;
 }
 .fares .container .left:hover .intro h3{
    color: #ffffff;
@@ -492,6 +506,27 @@ header .content a:hover{
    border-radius: 20px 20px 0 0 ;
    object-fit: cover;
 }
+.fares .bottom .col:hover .intro{
+   background-color: #5C0931;
+   transition: 1s;
+}
+.fares .bottom .col:hover .intro h3{
+   color: #ffffff;
+} 
+.fares .bottom .col:hover .intro p{
+   color: #ffffff;
+} 
+.fares .bottom .col:hover .intro .cardclasstype{
+   color: #ffffff;
+} 
+.fares .bottom .col:hover .intro .cardcost{
+   color: #ffffff;
+} 
+.fares .bottom .col:hover .intro .btn-container .disc{
+   color: #ffffff;
+   border: 1px solid #ffffff;
+}
+
 .fares .bottom .col .intro{
    padding: 0 10px;
    background-color: #ffffff;
@@ -522,11 +557,6 @@ header .content a:hover{
 .fares .bottom .col .intro .btn-container .disc{
    border: 1px solid #5C0931;
    background: transparent;
-}
-.fares .bottom .col .intro .btn-container .disc:hover{
-   background-color: #5C0931;
-   color: #ffffff;
-   transition: 1s;
 }
 .fares .viewbtn{
    text-align: center;
@@ -785,6 +815,23 @@ header .content a:hover{
    color: #ffffff;
 }
 /* ========================================== */
+.footer-wave {
+   padding: 131px 0 0;
+   text-align: left;
+   overflow: hidden;
+   position: relative;
+   z-index: 12;
+}
+.footer .wave-decoration {
+   position: absolute;
+   top: 1px;
+   z-index: 5;
+   pointer-events: none;
+   width: 2000px;
+   left: 50%;
+   margin: 0 0 0 -1000px;
+   height: 129px;
+}
 .footer .container{
    padding: 0 50px;
    background-color: #5C0931;
@@ -899,8 +946,12 @@ header .content a:hover{
    .next-trip .items{
       flex-direction: column;
    }
+   .next-trip .items .col h4{
+      bottom: 15%;
+   }
    .next-trip .items .col-2{
       flex-direction: row;
+      gap: 20px;
    }
    .fares .container{
       grid-template-columns: 1fr;
@@ -910,6 +961,13 @@ header .content a:hover{
    }
    .fares .right img{
       width: 100%;
+   }
+   .fares .container .right .mobhead{
+      display: block;
+      padding: 15px 20px;
+      background-color: #ffffff;
+      font-size: 20px;
+      border-radius: 0 0 24px 24px;
    }
    .fares .container .right .row-1 .intro{
       display:none;
@@ -1011,6 +1069,9 @@ header .content a:hover{
       flex-direction: column;
    }
    .next-trip .items .col h4{
+      bottom: 25%;
+   }
+   .next-trip .items .col-2 .row h4{
       bottom: 20%;
    }
    .fares{
